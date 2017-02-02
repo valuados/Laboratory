@@ -1,0 +1,14 @@
+@font-face {
+    font-family: GibsonSemiBold;
+    src: url(../fonts/Canada%20Type%20-%20Gibson-SemiBold.otf);
+}
+
+@font-face {
+    font-family: GibsonRegular;
+    src: url(../fonts/Canada%20Type%20-%20Gibson-Regular.otf);
+}
+
+@font-face {
+    font-family: GibsonLight;
+    src: url(../fonts/Canada%20Type%20-%20Gibson-Light.otf);
+}

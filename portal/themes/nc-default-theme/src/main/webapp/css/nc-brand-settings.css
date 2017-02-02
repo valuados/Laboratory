@@ -1,0 +1,176 @@
+/*------ Basic Style Settings Used in portlets ------*/
+.brand-main-color {
+    color: #117ec2 !important;
+}
+
+.brand-main-bg-color {
+    background-color: #153147 !important;
+}
+
+.brand-alt-color {
+    color: #edf6fa !important;
+}
+
+.brand-alt-bg-color {
+    background-color: #f3f3ef !important;
+}
+
+.brand-color-border {
+    border-color: #153147 !important;
+}
+
+.brand-color-alt-border {
+    border-color: #edf6fa !important;
+}
+
+/*---- Offer Portlet Settings -----*/
+.offer__item:hover {
+    background-color: #f3f3ef !important;
+}
+
+/*----- Wizard BreadCrumbs Settings ----*/
+.breadcrumbs .current {
+    background: #f9c04a !important;
+}
+
+.breadcrumbs .current:after {
+    border-left: 20px solid #f9c04a !important;
+}
+
+/* ---- Info Helper Portlet Settings ----*/
+.info_helper .current {
+    background: #f9c04a !important;
+}
+
+
+/*--- Locations Portlet Settings -----*/
+.portlet-container.configs .legs .config__item-column:hover {
+    background-color: #f3f3ef !important;
+}
+
+/*---- Categories Portlet Settings ----*/
+.categories__item._active {
+    border-bottom: 5px solid #f9c04a;
+}
+
+/*------ Pages navigation Highlight -----------*/
+.cabinet-menu__item_current,
+.cabinet-menu__item:hover {
+    border-color: #f9c04a !important;
+}
+
+/*----- Header Right Menu Text Color --------*/
+/*.top-menu {
+    color: #f9c04a !important;
+}*/
+
+/*---- Theme Footer Settings -----*/
+.footer {
+    background-color: white !important;
+}
+
+/*----- Buttons -----*/
+.button_standard {
+    background-color: #4e79a1 !important;
+    color: #fff !important;
+    font: 14px GibsonSemiBold;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 0 none;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 155px;
+    height: 42px;
+}
+
+.button_mini {
+    padding: 5px 17px;
+    background-color: #4e79a1 !important;
+    color: #fff !important;
+    font: 14px GibsonSemiBold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border: 0 none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.button_standard_alt {
+    background-color: #4e79a1 !important;
+    color: #fff !important;
+    font: 14px GibsonSemiBold;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 0 none;
+    cursor: pointer;
+    white-space: nowrap;
+    width: 155px;
+    height: 42px;
+}
+
+
+.button_cancel {
+    background-color: transparent;
+    border: none;
+    color: #117ec2;
+    font-size: 16px !important;
+
+    padding: 8px 28px;
+}
+
+.button_cancel:hover {
+    color: #1552C2;
+}
+
+.nc_button_primary_blue{
+    width: 229px;
+    height: 42px;
+    background: none;
+    background-color: #183147;
+    font: 14px GibsonSemiBold;
+
+    text-transform: uppercase;
+    color: #f8bf4c;
+    border: none;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    padding: 0 25px;
+    text-shadow: initial;
+    text-align: left;
+}
+
+.nc_button_primary_blue:focus, .nc_button_primary_blue:focus .nc_button_icon{
+    background-color: #183147;
+    color: #f8bf4c;
+}
+
+.nc_button_primary_blue a, .nc_button_primary_blue a:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+    font: 16px/21px GibsonSemiBold;
+}
+
+.nc_button_icon {
+    float: right;
+    margin-top: 5px !important;
+    color: #f8bf4c;
+}
+
+
+.nc_button_primary_blue:active, .nc_button_primary_blue:active .nc_button_icon,
+.nc_button_primary_blue:hover,
+.nc_button_primary_blue:hover .nc_button_icon,
+.nc_button_primary_blue:hover .nc_button_icon:hover
+{
+    color: #183147;
+    background-color: #f8bf4c;
+}
+
+
+.nc_button_primary_blue.disabled, .nc_button_primary_blue[disabled],.nc_button_primary_blue[disabled]:hover .nc_button_icon{
+    background-color: #7D99B1 !important;
+    color: #f8bf4c;
+    cursor: no-drop;
+}

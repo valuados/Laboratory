@@ -1,0 +1,388 @@
+.aui body {
+  background-color: #EDEDED;
+  &.portal-popup {
+    background-color: white;
+  }
+}
+
+#wrapper {
+  width: 950px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #fff;
+  margin: 35px auto 0;
+  padding-top: 5px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.39);
+}
+
+.aui .dockbar-split .dockbar, .aui .dockbar-split .dockbar.navbar-static-top .collapse .nav-account-controls {
+  background-origin: padding-box;
+  background: transparent url(../../images/att/sprite.png) repeat left -170px;
+  background-size: auto auto;
+  height: 34px;
+  z-index: 325;
+}
+
+.aui .dockbar-split .dockbar.navbar-static-top .collapse .nav-account-controls {
+  height: 33px;
+}
+
+.aui .dockbar-split .dockbar .navbar-inner .nav > li > a {
+  line-height: 20px;
+}
+
+.aui .dockbar .navbar-inner .nav > li, .aui .dockbar-split .dockbar .navbar-inner .nav > li {
+  background: transparent;
+}
+
+.aui .dockbar.navbar .nav > li > a:hover {
+  background-color: rgba(165, 165, 165, 0.65);
+}
+
+.aui .dockbar-split .dockbar .navbar-inner .nav-account-controls {
+  border-top: 1px solid transparent;
+}
+
+.site-title {
+  .logo {
+    margin-left: 20px;
+  }
+  .sub-logo-ent {
+    background-image: url("../../images/att/header_ent.jpg");
+    height: 35px;
+    width: 92px;
+    margin-left: 30px;
+    display: inline-block;
+  }
+}
+
+#top-custom-nav {
+  width: 980px;
+  margin: 34px auto 0 auto;
+  position: relative;
+  .segMenuContainer {
+    width: 300px;
+    position: absolute;
+    top: -27px;
+    z-index: 1200;
+    ul li {
+      float: left;
+      list-style: none;
+      padding: 1px 9px;
+      &.business {
+        padding: 1px 14px;
+        background-color: #ededed;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        position: relative;
+        span {
+          margin-right: 5px;
+        }
+        i {
+          text-decoration: none;
+        }
+        .segSubMenu {
+          display: none;
+          position: absolute;
+          border: 1px solid #ededed;
+          border-radius: 0 0 6px 6px;
+          background: white;
+          width: 135px;
+          left: -1px;
+          border-top: none;
+          a {
+            color: #005b95;
+          }
+          ul {
+            margin: 0;
+          }
+          li {
+            margin-left: 4px;
+            line-height: 23px;
+          }
+        }
+        &:hover {
+          background-color: #ffffff;
+          .segSubMenu {
+            display: block;
+          }
+        }
+      }
+      a {
+        color: #ffffff;
+        font-size: 12px;
+        &#segMenuItemBusiness {
+          color: #515151;
+        }
+      }
+    }
+  }
+
+}
+
+.search-box {
+  display: inline-block;
+  float: right;
+  input {
+    width: 120px;
+    font-size: 10px !important;
+    padding: 0 !important;
+    margin: 0;
+    vertical-align: top !important;
+  }
+  button {
+    margin-left: -7px;
+    vertical-align: top !important;
+  }
+}
+
+.aui #navigation {
+  height: 65px;
+}
+
+.aui #navigation .navbar-inner {
+  //noinspection SassScssUnresolvedFunction,SassScssUnresolvedMixin
+  @include background(linear-gradient(top, #005fb5 0%, #015bb1 3%, #005bb0 6%, #03539c 13%, #03519b 16%, #015093 19%, #024d90 26%, #014b8a 29%, #02437b 45%, #023c6c 77%, #003567 97%, #b1b0ae 100%));
+  min-height: 32px;
+  height: 32px;
+  padding-left: 0;
+  padding-right: 0;
+  border-radius: 4px;
+}
+
+.aui #navigation .navbar-inner {
+  li.l-1 {
+    a {
+      padding: 4px 15px 1px;
+      text-transform: uppercase;
+      border-right: 1px solid #FFF;
+      .icon-caret-down {
+        display: none;
+      }
+      span {
+        font-size: 12px;
+
+      }
+      &:hover {
+        //noinspection SassScssUnresolvedFunction,SassScssUnresolvedMixin
+        @include background(linear-gradient(top, #0691e2 0%, #078ce7 3%, #018ee0 6%, #0187de 13%, #0083d5 16%, #0177bf 42%, #0171b3 65%, #006bab 94%, #0168ad 97%, #afb1ac 100%));
+      }
+    }
+    &:first-child a {
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+    &.active {
+      a {
+        //noinspection SassScssUnresolvedFunction,SassScssUnresolvedMixin
+        @include background(linear-gradient(top, #e7e9e6 0%, #fdfbfc 27%, #fffffa 53%, #f2f4f3 77%, #d4d5d4 100%));
+        color: #FF7200;
+      }
+    }
+  }
+
+  .child-menu {
+    //noinspection SassScssUnresolvedFunction,SassScssUnresolvedMixin
+    @include background(linear-gradient(top, #e4e4e4 0%, #fcfcfc 7%, #ffffff 10%, #ffffff 15%, #fcfcfc 24%, #f6fafd 34%, #e4edf2 63%, #dbe6ec 71%, #d5e3ee 73%, #d7e2e8 76%, #d2dfe5 78%, #cddfe9 80%, #cddbe4 83%, #fffefc 85%, #fffefc 100%));
+    height: 42px;
+    padding: 0;
+    margin: 0;
+    li.l-2 {
+      float: left;
+      list-style: none;
+      line-height: 32px;
+      padding: 0 10px;
+      position: relative;
+      &.selected .a-l-2 {
+        color: #FF7200;
+      }
+      .child-2-menu {
+        display: none;
+        position: absolute;
+        background: #fff;
+        border: 1px solid #dcdcdc;
+        border-top: 0;
+        margin: 0;
+        left: 9px;
+        list-style: none;
+        padding: 4px;
+        z-index: 99999;
+      }
+      a {
+        color: #067AB4;
+        font-size: 11px;
+        text-decoration: none;
+        white-space: nowrap;
+        padding: 0 3px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &.has-children:hover {
+        a.a-l-2 {
+          background: #ffffff;
+          display: inline-block;
+          box-shadow: 0 7px 5px #000;
+        }
+        .child-2-menu {
+          display: block;
+          a {
+            font-size: 12px;
+
+          }
+          > li {
+            float: left;
+          }
+          .child-3-menu {
+            li {
+              list-style: none;
+              padding-left: 4px;
+              background: transparent url(../../images/att/bullet_square_10x7.gif) no-repeat 0 33%;
+              line-height: 16px;
+            }
+            a {
+              font-weight: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+#footer {
+  width: 980px;
+  margin: 0 auto;
+  font-size: 11px;
+}
+
+.aui #breadcrumbs {
+  margin-bottom: 5px;
+}
+
+.aui .breadcrumb {
+  background-color: transparent;
+  > li {
+    font-size: 11px;
+    &.only {
+      display: none;
+    }
+    &.last a {
+      color: #FF7200;
+    }
+  }
+}
+
+.portlet-borderless-bar .portlet-back a {
+  color: #fff;
+  &:hover {
+    color: #fff;
+  }
+}
+
+//noinspection SassScssUnresolvedFunction,CssUnknownProperty
+.nc-loading-indicator {
+  width: 5em;
+  height: 5em;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-left: -2.5em;
+  display: none;
+  font-size: 12px;
+  text-indent: 999em;
+  overflow: hidden;
+  -webkit-animation: spin 1s infinite steps(8);
+  animation: spin 1s infinite steps(8);
+  z-index: 2001;
+
+  &:before,
+  &:after,
+  > div:before,
+  > div:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 2.25em; /* (container width - part width)/2  */
+    width: .5em;
+    height: 1.5em;
+    border-radius: .2em;
+    background: #eee;
+    box-shadow: 0 3.5em #eee; /* container height - part height */
+    transform-origin: 50% 2.5em; /* container height / 2 */
+    -webkit-transform-origin: 50% 2.5em; /* container height / 2 */
+  }
+
+  &:before {
+    background: #555;
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    background: #777;
+  }
+
+  > div:before {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    background: #999;
+  }
+
+  > div:after {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    background: #bbb;
+  }
+}
+
+.nc-loading-block {
+  display: none;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  position: fixed;
+  z-index: 2000;
+  background: #000000;
+  top: 0;
+}
+
+//noinspection SassScssUnresolvedFunction,CssUnknownProperty
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+//noinspection SassScssUnresolvedFunction,CssUnknownProperty
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+.inline-dispatcher {
+  display: none;
+}
+
+.aui .lfr-hudcrumbs {
+  display: none !important;
+}
+
+.aui .sign-in-form .control-group {
+  margin-bottom: 0;
+}
+
+#signinmodal {
+  height: 280px !important;
+  width: 420px !important;
+  margin-left: -210px;
+  .modal-body {
+    height: auto !important;
+  }
+}
+
+.aui .portlet-borderless-container {
+  padding: 0;
+}

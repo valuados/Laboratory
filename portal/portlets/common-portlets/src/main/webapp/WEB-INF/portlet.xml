@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<portlet-app xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_2_0.xsd"
+             version="2.0">
+
+    <portlet>
+        <portlet-name>students</portlet-name>
+        <display-name>Students</display-name>
+        <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+        <init-param>
+            <name>contextConfigLocation</name>
+            <value>classpath:context/students.xml</value>
+        </init-param>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>edit</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Students</title>
+        </portlet-info>
+    </portlet>
+
+    <portlet>
+        <portlet-name>createUpdateStudent</portlet-name>
+        <display-name>Create Update Student Popup</display-name>
+        <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+        <init-param>
+            <name>contextConfigLocation</name>
+            <value>classpath:context/createUpdateStudent.xml</value>
+        </init-param>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>edit</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Create Update Student Popup</title>
+        </portlet-info>
+    </portlet>
+
+    <portlet>
+        <portlet-name>offers</portlet-name>
+        <display-name>Offers</display-name>
+        <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+        <init-param>
+            <name>contextConfigLocation</name>
+            <value>classpath:context/offers.xml</value>
+        </init-param>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>edit</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Offers</title>
+        </portlet-info>
+    </portlet>
+
+    <portlet>
+        <portlet-name>serviceCart</portlet-name>
+        <display-name>Cart</display-name>
+        <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+        <init-param>
+            <name>contextConfigLocation</name>
+            <value>classpath:context/serviceCart.xml</value>
+        </init-param>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>edit</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Cart</title>
+        </portlet-info>
+    </portlet>
+
+    <portlet>
+        <portlet-name>summary</portlet-name>
+        <display-name>Summary</display-name>
+        <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+        <init-param>
+            <name>contextConfigLocation</name>
+            <value>classpath:context/summary.xml</value>
+        </init-param>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>edit</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Summary</title>
+        </portlet-info>
+    </portlet>
+
+    <portlet>
+        <portlet-name>breadcrumbs</portlet-name>
+        <display-name>Breadcrumbs</display-name>
+        <portlet-class>org.springframework.web.portlet.DispatcherPortlet</portlet-class>
+        <init-param>
+            <name>contextConfigLocation</name>
+            <value>classpath:context/breadcrumbs.xml</value>
+        </init-param>
+        <supports>
+            <mime-type>text/html</mime-type>
+            <portlet-mode>edit</portlet-mode>
+        </supports>
+        <portlet-info>
+            <title>Breadcrumbs</title>
+        </portlet-info>
+    </portlet>
+
+</portlet-app>

@@ -1,0 +1,40 @@
+<div class="cabinet-menu__wrap">
+    <div class="wrap-inner wrap-inner_wide">
+        <ul class="cabinet-menu__list">
+            #set ($currentPage = '')
+            #set ($flag = true)
+            #foreach ($nav_item in $nav_items)
+                #set ($nav_item_attr_selected="")
+                #set ($nav_item_css_class="cabinet-menu__item")
+                #set ($nav_item_link_css_class="cabinet-menu__link")
+                #set ($nav_item_selected_css_class="cabinet-menu__item cabinet-menu__item_current")
+
+                #if ($nav_item.isSelected())
+                    #set ($nav_item_attr_selected="aria-selected='true'")
+                    #set ($nav_item_css_class=$nav_item_selected_css_class)
+                    #set ($currentPage = $nav_item.getName())
+                #end
+
+                <li class="$nav_item_css_class" id="layout_$nav_item.getLayoutId()" role="presentation" $nav_item_attr_selected>
+                    <a aria-labelledby="layout_$nav_item.getLayoutId()" $nav_item_attr_has_popup class="$nav_item_link_css_class" href="$nav_item.getURL()" $nav_item.getTarget() role="menuitem">
+                    $nav_item.getName()
+                    </a>
+                </li>
+            #end
+        </ul>
+    </div>
+</div>
+<div class="current-page-title">
+    <div>$page.getHTMLTitle($locale)</div>
+</div>
+
+<script>
+    /*Liferay.Data.NAV_LIST_SELECTOR = 'ul.cabinet-menu__list';*/
+    jQuery(document).ready(function() {
+//        var isSelected = jQuery('.cabinet-menu__list li[aria-selected="true"]').size() > 0;
+        if(window.location.href.indexOf('offer') >= 0 ) {
+            jQuery('.cabinet-menu__list li').eq(0).attr('aria-selected', 'true').addClass('cabinet-menu__item_current');
+        }
+    })
+
+</script>

@@ -1,0 +1,1050 @@
+/*
+ *  File:         nc-object-table.css
+ *  CVS:          $Id$
+ *  Description:  CSS descriptions for DataTables
+ *  Author:       Allan Jardine
+ *  Created:      Tue May 12 06:47:22 BST 2009
+ *  Modified:     $Date$ by $Author$
+ *  Language:     CSS
+ *  Project:      DataTables
+ *
+ *  Copyright 2009 Allan Jardine. All Rights Reserved.
+ *
+ * ***************************************************************************
+ * DESCRIPTION
+ *
+ * The styles given here are suitable for the demos that are used with the standard DataTables
+ * distribution (see www.datatables.net). You will most likely wish to modify these styles to
+ * meet the layout requirements of your site.
+ *
+ * Common issues:
+ *   'full_numbers' pagination - I use an extra selector on the body tag to ensure that there is
+ *     no conflict between the two pagination types. If you want to use full_numbers pagination
+ *     ensure that you either have "example_alt_pagination" as a body class name, or better yet,
+ *     modify that selector.
+ *   Note that the path used for Images is relative. All images are by default located in
+ *     ../images/nc_object_table/ - relative to this CSS file.
+ */
+
+ 
+ 
+/*Table*/
+.dashboardTableHolder {
+    margin-top: 4px;
+}
+
+.dashboardTableHeader .pointer {
+    float: left;
+    margin-top: 2px;
+}
+
+.dashboardTableHeader .columnName, .dashboardTable td {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.dashboardTableContainer {
+    border-top: solid #C1C1C1 2px;
+    margin-top: 2px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.dashboardRowHeader {
+    color: #4A5A69;
+
+
+}
+
+.dashboardRow {
+    color: #4A5A69;
+
+}
+
+.dashboardRow:hover {
+    background-color: #EBEAF5;
+}
+
+.dashboardRowInfo {
+    padding: 2px 2px 2px 4px;
+}
+
+
+/*Buttons*/
+.dashboardButtonInfo {
+
+    vertical-align: super;
+}
+
+.dashboardButtons {
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+
+/*Sorting*/
+.forwardSorting {
+    cursor: pointer;
+    width: 14px;
+    height: 16px;
+    background: url(../images/nc_object_table/sortForward.png) center center no-repeat;
+}
+
+.backwardSorting {
+    cursor: pointer;
+    width: 14px;
+    height: 16px;
+    background: url(../images/nc_object_table/sortBackward.png) center center no-repeat;
+}
+
+
+/*Filtering*/
+.filterString{
+    float: right;
+    width: 100px;
+}
+
+.dashboardFilterHolder{
+    float: left;
+    margin-bottom: -1px;
+    display: none;
+}
+
+.dashboardFilter {
+    cursor: pointer;
+    line-height: 0;
+    margin-bottom: -1px;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    padding-top: 5px;
+    color: rgb(92, 92, 238);
+    /*background: url('../images/nc_object_table/filter.png') center center no-repeat;*/
+}
+
+.dashboardFilterOn {
+    color: rgb(44, 141, 52);
+    /*background: url('../images/nc_object_table/filter_on.png') center center no-repeat;*/
+}
+
+.dashboardFilterApplied {
+    background: url('../images/nc_object_table/filter_applied2.png') center center no-repeat;
+}
+
+.filterContent{
+    display: none;
+    width: 124px;
+    position: absolute;
+
+    background-color: white;
+    border: #4A6E99 1px solid;
+    cursor: pointer;
+}
+
+.filterApplier{
+    width: 18px;
+    height: 18px;
+    float: left;
+    background: url('../images/nc_object_table/filter_ok.png') center center no-repeat;
+    cursor: pointer
+}
+
+.filterApplier:hover{
+    border: 1px solid #a9a9a9
+}
+
+.filterDisabler{
+    width: 18px;
+    height: 18px;
+    float: left;
+    background: url('../images/nc_object_table/filter_cancel.png') center center no-repeat;
+    cursor: pointer
+}
+
+.filterDisabler:hover{
+    border: 1px solid #a9a9a9
+}
+
+.dashboardFilterInfo {
+    float: left;
+    margin: 2px 0 0 2px;
+    cursor: pointer;
+}
+
+
+
+
+/*
+CONTAINERS
+*/
+
+.c_portlet_box {
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin: 4px 0px 4px 0px;
+}
+
+.c_borderless {
+    border: none;
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+.c_wide {
+    width: 100%;
+}
+
+.c_centered {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+ROWS
+*/
+
+.c_row:nth-child(2n) {
+    background-color: #fefefe;
+}
+
+.c_row:nth-child(2n+1) {
+    background-color: #f9f9f9;
+}
+
+.c_row:nth-child(2n):hover {
+    background-color: #c8d4e6;
+}
+
+.c_row:nth-child(2n+1):hover {
+    background-color: #BCC9DB;
+}
+
+/*
+LABELS
+*/
+
+.c_label {
+    vertical-align: text-bottom;
+    cursor: pointer;
+
+    padding: 0px 4px 0px 4px;
+    font-size: 11px;
+    line-height: 22px;
+}
+
+.c_value {
+    line-height: 22px;
+}
+
+.c_font_base {
+    color: #4A5A69;
+
+    font-size: 11px;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 11px;
+}
+
+/*
+BUTTONS
+*/
+.c_button_a {
+    margin: 1px 1px 1px 1px !important;
+    padding: 1px 8px 1px 8px !important;
+}
+
+.c_button_a .c_label {
+    line-height: 12px;
+    font-size: 12px;
+    margin-top: -2px;
+}
+
+.t_button_a{
+   position: relative;
+}
+
+.t_button_img{
+    position: absolute;
+    /*margin-left: -57px;*/
+}
+.t_label{
+   position: relative;
+   white-space: nowrap;
+   margin-top: 7px !important;
+   margin-left: 28px;
+}
+.t_button_a{
+    display: inline-table;
+    vertical-align: middle;
+}
+.t_button_a .t_label{
+    /*display: table-cell;*/
+    height: 17px;
+    vertical-align: middle;
+}
+
+
+/*
+HL
+*/
+.notifier_green {
+    text-align: center;
+    border-radius: 4px;
+    background: #6AC157;
+    color:white;
+}
+
+.notifier_yellow {
+    text-align: center;
+    border-radius: 4px;
+    background: #DBCD27;
+    color:white;
+}
+
+.notifier_red {
+    text-align: center;
+    border-radius: 4px;
+    background: #C53939;
+    color:white;
+}
+
+.notifier_suspended {
+    text-align: center;
+    border-radius: 4px;
+    background: #729FDC;
+    color:white;
+}
+
+.notifier_completed {
+    text-align: center;
+    border-radius: 4px;
+    background: #85A446;
+    color:white;
+}
+
+.notifier_archived {
+    text-align: center;
+    border-radius: 4px;
+    background: #262626;
+    color:white;
+}
+
+.notifier_new {
+    text-align: center;
+    border-radius: 4px;
+    background: #927AAD;
+    color:white;
+}
+
+.notifier_processing {
+    text-align: center;
+    border-radius: 4px;
+    background: #285EA6;
+    color:white;
+}
+
+.notifier_cancaled {
+    text-align: center;
+    border-radius: 4px;
+    background: #737373;
+    color:white;
+}
+
+.notifier_suspending {
+    text-align: center;
+    border-radius: 4px;
+    background: #CD736B;
+    color:white;
+}
+
+.highlight_tx {
+    color: white !important;
+}
+
+.c_hl_green {
+    margin: 1px 2px 1px 2px;
+    text-align: center;
+    background: #6AC157;
+    color: #fefefe;
+    border-radius: 2px;
+}
+
+.lfr-actions.portlet-options .lfr-trigger strong a{
+    background-image:url('../images/nc_object_table/optionsWhite.png') !important;
+}
+
+.portlet-minimize-icon img.icon{
+    content: url('../images/nc_object_table/minimizeWhite.png') !important;
+}
+
+.portlet-close-icon img.icon{
+    content: url('../images/nc_object_table/closeWhite.png') !important;
+}
+.portlet-maximize-icon img.icon{
+    content: url('../images/nc_object_table/maximizeWhite.png') !important;
+}
+/*HEADERS*/
+.c_portlet_header{
+    color: #fefefe;
+    background-color: #3E6B9F;
+    white-space: nowrap;
+    height: 23px;
+    display: block;
+    position: relative;
+    width: auto;
+
+
+    font-size: 11px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.c_portlet_header .c_portlet_label{
+    color: #fefefe;
+    white-space: nowrap;
+
+
+    font-size: 11px;
+    position: absolute;
+    bottom: 3px;
+    left:4px;
+}
+
+.c_main_content a:link, a:active, a:visited {
+    /*color: #056190 !important;*/
+}
+
+.c_main_content{
+    /*color: #4A5A69  !important;*/
+}
+
+
+
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables features
+ */
+.tableContainer > table{
+    display: none;
+}
+
+.dataTables_wrapper {
+    position: relative;
+    clear: both;
+    zoom: 1; /* Feeling sorry for IE */
+}
+
+.dataTables_processing {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 30px;
+    margin-left: -125px;
+    margin-top: -15px;
+    padding: 14px 0 2px 0;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    background-color: white;
+}
+
+.dataTables_length {
+    /*width: 40%;*/
+    float: left;
+}
+
+.dataTables_filter {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.dataTables_info {
+    width: 60%;
+    float: left;
+}
+
+.dataTables_paginate {
+    float: right;
+    text-align: right;
+}
+
+/* Pagination nested */
+.paginate_disabled_previous, .paginate_enabled_previous,
+.paginate_disabled_next, .paginate_enabled_next {
+    height: 19px;
+    float: left;
+    cursor: pointer;
+    *cursor: hand;
+    color: #111 !important;
+}
+
+.paginate_disabled_previous:hover, .paginate_enabled_previous:hover,
+.paginate_disabled_next:hover, .paginate_enabled_next:hover {
+    text-decoration: none !important;
+}
+
+.paginate_disabled_previous:active, .paginate_enabled_previous:active,
+.paginate_disabled_next:active, .paginate_enabled_next:active {
+    outline: none;
+}
+
+.paginate_disabled_previous,
+.paginate_disabled_next {
+    color: #666 !important;
+}
+
+.paginate_disabled_previous, .paginate_enabled_previous {
+    padding-left: 23px;
+}
+
+.paginate_disabled_next, .paginate_enabled_next {
+    padding-right: 23px;
+    margin-left: 10px;
+}
+
+.paginate_disabled_previous {
+    background: url('../images/nc_object_table/back_disabled.png') no-repeat top left;
+}
+
+.paginate_enabled_previous {
+    background: url('../images/nc_object_table/back_enabled.png') no-repeat top left;
+}
+
+.paginate_enabled_previous:hover {
+    background: url('../images/nc_object_table/back_enabled_hover.png') no-repeat top left;
+}
+
+.paginate_disabled_next {
+    background: url('../images/nc_object_table/forward_disabled.png') no-repeat top right;
+}
+
+.paginate_enabled_next {
+    background: url('../images/nc_object_table/forward_enabled.png') no-repeat top right;
+}
+
+.paginate_enabled_next:hover {
+    background: url('../images/nc_object_table/forward_enabled_hover.png') no-repeat top right;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables display
+ */
+table.display {
+    margin: 0 auto;
+    clear: both;
+    width: 100%;
+
+    /* Note Firefox 3.5 and before have a bug with border-collapse
+     * ( https://bugzilla.mozilla.org/show%5Fbug.cgi?id=155955 )
+     * border-spacing: 0; is one possible option. Conditional-css.com is
+     * useful for this kind of thing
+     *
+     * Further note IE 6/7 has problems when calculating widths with border width.
+     * It subtracts one px relative to the other browsers from the first column, and
+     * adds one to the end...
+     *
+     * If you want that effect I'd suggest setting a border-top/left on th/td's and
+     * then filling in the gaps with other borders.
+     */
+}
+
+table.display thead th {
+    padding: 3px 10px 3px 10px;
+    /*border-bottom: 1px solid black;*/
+
+    cursor: pointer;
+    *cursor: hand;
+}
+
+table.display tfoot th {
+    padding: 3px 18px 3px 10px;
+    /*border-top: 1px solid black;*/
+
+}
+
+table.display tr.heading2 td {
+    border-bottom: 1px solid #aaa;
+}
+
+table.display td {
+    padding: 10px;
+}
+
+table.display td.center {
+    text-align: center;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables sorting
+ */
+
+.sorting_asc {
+    background: url('../images/nc_object_table/sort_asc.png') no-repeat center left;
+    background-position-x: 20%;
+}
+
+.sorting_desc {
+    background: url('../images/nc_object_table/sort_desc.png') no-repeat center left;
+    background-position-x: 20%;
+}
+
+.sorting {
+    background: url('../images/nc_object_table/sort_both.png') no-repeat center left;
+    background-position-x: 20%;
+}
+
+.sorting_asc_disabled {
+    background: url('../images/nc_object_table/sort_both.png') no-repeat center left;
+    background-position-x: 20%;
+}
+
+.sorting_desc_disabled {
+    background: url('../images/nc_object_table/sort_both.png') no-repeat center left;
+    background-position-x: 20%;
+}
+
+table.display thead th:active,
+table.display thead td:active {
+    outline: none;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables row classes
+ */
+table.display tr.odd.gradeA {
+    background-color: #ddffdd;
+}
+
+table.display tr.even.gradeA {
+    background-color: #eeffee;
+}
+
+table.display tr.odd.gradeC {
+    background-color: #ddddff;
+}
+
+table.display tr.even.gradeC {
+    background-color: #eeeeff;
+}
+
+table.display tr.odd.gradeX {
+    background-color: #ffdddd;
+}
+
+table.display tr.even.gradeX {
+    background-color: #ffeeee;
+}
+
+table.display tr.odd.gradeU {
+    background-color: #ddd;
+}
+
+table.display tr.even.gradeU {
+    background-color: #eee;
+}
+
+tr.odd {
+    /*background-color: #E2E4FF;*/
+    background-color: #f9f9f9 !important;
+}
+
+tr.even {
+    background-color: white;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * Misc
+ */
+.dataTables_scroll {
+    clear: both;
+}
+
+.dataTables_scrollBody {
+    *margin-top: -1px;
+    -webkit-overflow-scrolling: touch;
+}
+
+.tableContainer .top, .tableContainer .bottom {
+    padding: 15px;
+    background-color: #F5F5F5;
+    border: 1px solid #CCCCCC;
+}
+
+.tableContainer .top .dataTables_info {
+    float: none;
+}
+
+.tableContainer .clear {
+    clear: both;
+}
+
+.dataTables_empty {
+    text-align: center;
+}
+
+tfoot input {
+    margin: 0.5em 0;
+    width: 100%;
+    color: #444;
+}
+
+tfoot input.search_init {
+    color: #999;
+}
+
+td.group {
+    background-color: #d1cfd0;
+    border-bottom: 2px solid #A19B9E;
+    border-top: 2px solid #A19B9E;
+}
+
+td.details {
+    background-color: #d1cfd0;
+    border: 2px solid #A19B9E;
+}
+
+.example_alt_pagination div.dataTables_info {
+    width: 40%;
+}
+
+.paging_full_numbers {
+    width: 300px;
+    height: 30px;
+    line-height: 22px;
+}
+
+.paging_full_numbers a:active {
+    outline: none
+}
+
+.paging_full_numbers a:hover {
+    text-decoration: none;
+}
+
+.paging_full_numbers a.paginate_button,
+.paging_full_numbers a.paginate_active {
+    border: 1px solid #aaa;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    padding: 2px 5px;
+    margin: 0 3px;
+    cursor: pointer;
+    color: #333 /* !important*/;
+}
+
+.paging_full_numbers a.paginate_button {
+    color: #3475CD;
+    background-color: transparent;
+
+
+    display: inline-block;
+    text-align: center;
+    border: none;
+
+    border-radius: 4px;
+    margin: 0px 1px 0px 1px;
+    line-height: 24px;
+    height: 24px;
+    width: 24px;
+    padding: 0px;
+}
+
+.paging_full_numbers a.paginate_button:hover {
+    background-color: #ccc;
+    text-decoration: none !important;
+}
+
+.paging_full_numbers a.paginate_active {
+    color: #fefefe;
+    background-color: #3475CD;
+
+
+    display: inline-block;
+    text-align: center;
+    border: none;
+
+    border-radius: 4px;
+    margin: 0px 1px 0px 1px;
+    line-height: 24px;
+    height: 24px;
+    width: 24px;
+    padding: 0px;
+}
+
+table.display tr.even.row_selected td {
+    background-color: #B0BED9;
+}
+
+table.display tr.odd.row_selected td {
+    background-color: #9FAFD1;
+}
+
+
+.paging_full_numbers a.first {
+    color: transparent !important;
+    background: url('../images/nc_object_table/page_first_24_1.png') no-repeat center center;
+}
+
+.paging_full_numbers a.last {
+    color: transparent !important;
+    background: url('../images/nc_object_table/page_last_24_1.png') no-repeat center center;
+}
+
+.paging_full_numbers a.next {
+    color: transparent !important;
+    background: url('../images/nc_object_table/page_next_24_1.png') no-repeat center center;
+}
+
+.paging_full_numbers a.previous {
+    color: transparent !important;
+    background: url('../images/nc_object_table/page_prev_24_1.png') no-repeat center center;
+}
+
+.paging_full_numbers a.first:hover {
+    background: transparent url('../images/nc_object_table/page_first_over_24_1.png') no-repeat center center;
+}
+
+.paging_full_numbers a.last:hover {
+    background: transparent url('../images/nc_object_table/page_last_over_24_1.png') no-repeat center center;
+}
+
+.paging_full_numbers a.next:hover {
+    background: transparent url('../images/nc_object_table/page_next_over_24_1.png') no-repeat center center;
+}
+
+.paging_full_numbers a.previous:hover {
+    background: transparent url('../images/nc_object_table/page_prev_over_24_1.png') no-repeat center center;
+}
+
+.paging_full_numbers a.first.paginate_button_disabled {
+    background-image: url('../images/nc_object_table/page_first_off_24_1.png');
+}
+
+.paging_full_numbers a.last.paginate_button_disabled {
+    background-image: url('../images/nc_object_table/page_last_off_24_1.png');
+}
+
+.paging_full_numbers a.next.paginate_button_disabled {
+    background-image: url('../images/nc_object_table/page_next_off_24_1.png');
+}
+
+.paging_full_numbers a.previous.paginate_button_disabled {
+    background-image: url('../images/nc_object_table/page_prev_off_24_1.png');
+}
+
+/*
+ * Sorting classes for columns
+ */
+/* For the standard odd/even */
+tr.odd td.sorting_1 {
+    /*background-color: #D3D6FF;*/
+    background-color: #f9f9f9 !important;
+}
+
+tr.odd td.sorting_2 {
+    background-color: #DADCFF;
+}
+
+tr.odd td.sorting_3 {
+    background-color: #E0E2FF;
+}
+
+/*tr.even td.sorting_1 {
+	background-color: #EAEBFF;
+}*/
+
+tr.even td.sorting_2 {
+    background-color: #F2F3FF;
+}
+
+tr.even td.sorting_3 {
+    background-color: #F9F9FF;
+}
+
+/* For the Conditional-CSS grading rows */
+/*
+ 	Colour calculations (based off the main row colours)
+  Level 1:
+		dd > c4
+		ee > d5
+	Level 2:
+	  dd > d1
+	  ee > e2
+ */
+tr.odd.gradeA td.sorting_1 {
+    background-color: #c4ffc4;
+}
+
+tr.odd.gradeA td.sorting_2 {
+    background-color: #d1ffd1;
+}
+
+tr.odd.gradeA td.sorting_3 {
+    background-color: #d1ffd1;
+}
+
+tr.even.gradeA td.sorting_1 {
+    background-color: #d5ffd5;
+}
+
+tr.even.gradeA td.sorting_2 {
+    background-color: #e2ffe2;
+}
+
+tr.even.gradeA td.sorting_3 {
+    background-color: #e2ffe2;
+}
+
+tr.odd.gradeC td.sorting_1 {
+    background-color: #c4c4ff;
+}
+
+tr.odd.gradeC td.sorting_2 {
+    background-color: #d1d1ff;
+}
+
+tr.odd.gradeC td.sorting_3 {
+    background-color: #d1d1ff;
+}
+
+tr.even.gradeC td.sorting_1 {
+    background-color: #d5d5ff;
+}
+
+tr.even.gradeC td.sorting_2 {
+    background-color: #e2e2ff;
+}
+
+tr.even.gradeC td.sorting_3 {
+    background-color: #e2e2ff;
+}
+
+tr.odd.gradeX td.sorting_1 {
+    background-color: #ffc4c4;
+}
+
+tr.odd.gradeX td.sorting_2 {
+    background-color: #ffd1d1;
+}
+
+tr.odd.gradeX td.sorting_3 {
+    background-color: #ffd1d1;
+}
+
+tr.even.gradeX td.sorting_1 {
+    background-color: #ffd5d5;
+}
+
+tr.even.gradeX td.sorting_2 {
+    background-color: #ffe2e2;
+}
+
+tr.even.gradeX td.sorting_3 {
+    background-color: #ffe2e2;
+}
+
+tr.odd.gradeU td.sorting_1 {
+    background-color: #c4c4c4;
+}
+
+tr.odd.gradeU td.sorting_2 {
+    background-color: #d1d1d1;
+}
+
+tr.odd.gradeU td.sorting_3 {
+    background-color: #d1d1d1;
+}
+
+tr.even.gradeU td.sorting_1 {
+    background-color: #d5d5d5;
+}
+
+tr.even.gradeU td.sorting_2 {
+    background-color: #e2e2e2;
+}
+
+tr.even.gradeU td.sorting_3 {
+    background-color: #e2e2e2;
+}
+
+/*
+ * Row highlighting example
+ */
+.ex_highlight #example tbody tr.even:hover, #example tbody tr.even td.highlighted {
+    background-color: #ECFFB3;
+}
+
+.ex_highlight #example tbody tr.odd:hover, #example tbody tr.odd td.highlighted {
+    background-color: #E6FF99;
+}
+
+.ex_highlight_row #example tr.even:hover {
+    background-color: #ECFFB3;
+}
+
+.ex_highlight_row #example tr.even:hover td.sorting_1 {
+    background-color: #DDFF75;
+}
+
+.ex_highlight_row #example tr.even:hover td.sorting_2 {
+    background-color: #E7FF9E;
+}
+
+.ex_highlight_row #example tr.even:hover td.sorting_3 {
+    background-color: #E2FF89;
+}
+
+.ex_highlight_row #example tr.odd:hover {
+    background-color: #E6FF99;
+}
+
+.ex_highlight_row #example tr.odd:hover td.sorting_1 {
+    background-color: #D6FF5C;
+}
+
+.ex_highlight_row #example tr.odd:hover td.sorting_2 {
+    background-color: #E0FF84;
+}
+
+.ex_highlight_row #example tr.odd:hover td.sorting_3 {
+    background-color: #DBFF70;
+}
+
+/*
+ * KeyTable
+ */
+table.KeyTable td {
+    border: 3px solid transparent;
+}
+
+table.KeyTable td.focus {
+    border: 3px solid #3366FF;
+}
+
+table.display tr.gradeA {
+    background-color: #eeffee;
+}
+
+table.display tr.gradeC {
+    background-color: #ddddff;
+}
+
+table.display tr.gradeX {
+    background-color: #ffdddd;
+}
+
+table.display tr.gradeU {
+    background-color: #ddd;
+}
+
+div.box {
+    height: 100px;
+    padding: 10px;
+    overflow: auto;
+    border: 1px solid #8080FF;
+    background-color: #E5E5FF;
+}

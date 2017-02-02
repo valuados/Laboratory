@@ -1,0 +1,130 @@
+/*------ Basic Style Settings Used in portlets ------*/
+.brand-main-color {
+      color: #ff7900!important;
+}
+.brand-main-bg-color {
+     background-color: #ff7900!important;
+}
+.brand-alt-color {
+    color: #FAF6ED!important;
+}
+.brand-alt-bg-color {
+     background-color: #FAF6ED!important;
+}
+.brand-color-border {
+    border-color: #ff7900!important;
+}
+.brand-color-alt-border {
+    border-color: #FAF6ED!important;
+}
+
+
+/*---- Offer Portlet Settings -----*/
+.offer__item:hover {
+    background-color: #FAF6ED!important;
+}
+/*----- Wizard BreadCrumbs Settings ----*/
+.breadcrumbs .current {
+    background: #F5DEB3!important;
+}
+.breadcrumbs .current:after {
+    border-left-color:#F5DEB3!important;
+}
+/* ---- Info Helper Portlet Settings ----*/
+.info_helper .current {
+    background: #ff7900!important;
+}
+.info_helper .current:after {
+    border-left-color: #ff7900!important;
+}
+/*--- Locations Portlet Settings -----*/
+.portlet-container.configs .legs .config__item-column:hover {
+    background-color: #FAF6ED!important;
+}
+
+/*---- Categories Portlet Settings ----*/
+.categories__item._active {
+    border-bottom: 5px solid #ff7900;
+}
+
+/*------ Pages Navigation Highlight -----------*/
+.cabinet-menu__item_current,
+.cabinet-menu__item:hover {
+    border-color: #ff7900!important;
+}
+/*----- Header Right Menu Text Color --------*/
+.top-menu {
+    color: #F17200!important;
+}
+/*---- Theme Footer Settings -----*/
+.footer {
+    background-color: black !important;
+}
+
+/*----- Buttons -----*/
+.button_standard {
+    background-color: #ff7900!important;
+    color: #fff!important;
+
+    font-size: 14px!important;
+    border: 0 none;
+    padding: 7px 25px 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.button_mini:hover,
+.button_standard:hover {
+    background-color: #F17200 !important;
+}
+
+
+.button_mini {
+    padding: 5px 17px;
+    font-size: 11px !important;
+    -moz-border-radius: 2px;
+    border-radius: 14px;
+    background-color: #ff7900!important;
+    color: #fff!important;
+
+
+    border: 0 none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+.button_standard_alt {
+    background-color: transparent;
+    color: #ff7900;
+
+
+    font-size: 14px!important;
+    padding: 7px 25px 7px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: 1px solid #ff7900!important;
+    white-space: nowrap;
+}
+.button_standard_alt:hover {
+    background-color: #ff7900!important;
+    color: #fff;
+    border: 0 none;
+}
+.button_big {
+    font-size: 20px!important;
+    padding: 11px 30px 11px 30px!important;
+}
+.button_cancel {
+    background-color: transparent;
+    border: none;
+    color: #ff7900;
+    font-size: 16px!important;
+
+    padding: 8px 28px;
+}
+
+.button_cancel:hover {
+    color: #F17200;
+}

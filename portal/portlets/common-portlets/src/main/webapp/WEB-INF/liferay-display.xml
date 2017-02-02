@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<display>
+    <category name="NC Portlets">
+        <portlet id="students"/>
+        <portlet id="createUpdateStudent"/>
+        <portlet id="offers"/>
+        <portlet id="serviceCart"/>
+        <portlet id="summary"/>
+        <portlet id="breadcrumbs"/>
+    </category>
+</display>

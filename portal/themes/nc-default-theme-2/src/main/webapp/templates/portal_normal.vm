@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+    #parse ($init)
+
+<html class="$root_css_class #if($portalUtil.isOmniadmin($user.getUserId()))  omni-admin #end"
+      dir="#language ("lang.dir")" lang="$w3c_language_id">
+
+<head>
+    <title>$the_title - $company_name</title>
+
+    <meta content="initial-scale=1.0, width=device-width" name="viewport"/>
+
+    $theme.include($top_head_include)
+    #js("$javascript_folder/jquery.1.11.0.min.js?minifierType=js&languageId=$w3c_language_id")
+    <script>
+        jQuery.noConflict();
+    </script>
+    #js("$javascript_folder/nc.portlet.utils.js?minifierType=js&languageId=$w3c_language_id")
+    #js("$javascript_folder/nc.portlet.form.profiles.js?minifierType=js&languageId=$w3c_language_id")
+    #js("$javascript_folder/notify.js?minifierType=js&languageId=$w3c_language_id")
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,900,900italic,700italic,700,500italic,500,400italic,300italic,300,100italic,100&subset=cyrillic,cyrillic-ext,latin,latin-ext'
+          rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=cyrillic,cyrillic-ext,latin,latin-ext'
+          rel='stylesheet' type='text/css'>
+
+</head>
+
+<body class="$css_class">
+
+    $theme.include($body_top_include)
+<div class="wrap">
+    <header class="header">
+        <div class="wrap-inner">
+            <ul class="top-menu top-menu_right">
+                #if ($is_signed_in)
+                    <li class="top-menu__item top-menu__item_selected"><a href="#"
+                                                                          onclick="jQuery('li.sign-out a span').click(); return false;"
+                                                                          class="top-menu__item-core">Log Out<a></li>
+                #else
+                    <li class="top-menu__item">
+                        <a href="#" class="top-menu__item-core"
+                           onclick="NC.showLoader(true);Liferay.fire('show.customer-form'); return false;">
+                            <span class="next-link">
+                                <span class="next-link__core">Subscribe</span>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="top-menu__item">
+                        <p style="margin: 0 auto">|</p>
+                    </li>
+                    <li class="top-menu__item top-menu__item_selected"><a href="#"
+                                                                          onclick="jQuery('li.sign-in a span').click(); return false;"
+                                                                          class="top-menu__item-core">Log In<a></li>
+                #end
+
+            </ul>
+            <a class="header-logo" href="$site_default_url" title="#language_format ("go-to-x", [$site_name])">
+            #*<img src="$company_logo" alt=""/>*#
+                <img src="/NC-Default-Theme-2/images/NC_logo.svg" alt="Company Logo"/>
+            </a>
+        </div>
+        #dockbar()
+    </header>
+    <div class="foreword">
+        <div class="main-slider">
+            <ul class="main-slider__list">
+                <li class="main-slider__item">
+                    <div class="main-slider__back main-slider__back_solution"></div>
+                    <div class="wrap-inner">
+                        <div class="main-slider__caption"><p>Welcome to NetCracker Laboratory!</p>
+                            #*<p class="main-slider__text">Embrace the future and explore our next generation services</p>*#
+                            <a class="subscribe-link subscribe-link_right" href="#"
+                               onclick="jQuery('li.sign-in a span').click(); return false;"<span
+                                    class="subscribe-link__core">Subscribe Now</span></a>
+                        </div>
+
+                        <div class="main-slider__bottom">
+                            <div class="main-slider__ico">
+                                <img src="$images_folder/banner-img.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-slider__item">
+                    <div class="main-slider__back main-slider__back_flexibility"></div>
+                    <div class="wrap-inner">
+                        <div class="main-slider__caption">Thinking of adding more flexibility and personalization to
+                            your services
+                        </div>
+                        <div class="main-slider__bottom">
+                            <div class="main-slider__ico main-slider__ico_flexibility"></div>
+                            <div>
+                            </div>
+                </li>
+                <li class="main-slider__item">
+                    <div class="main-slider__back main-slider__back_manage"></div>
+                    <div class="wrap-inner">
+                        <div class="main-slider__caption">Want to reduce time to market and costs?</div>
+                        <div class="main-slider__bottom">
+                            <div class="main-slider__ico main-slider__ico_manage"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="main-slider__item">
+                    <div class="main-slider__back main-slider__back_network"></div>
+                    <div class="wrap-inner">
+                        <div class="main-slider__caption">Considering network virtualization?</div>
+                        <div class="main-slider__bottom">
+                            <div class="main-slider__ico main-slider__ico_network"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <!--
+            <div class="main-slider__timeline">
+                <div class="wrap-inner">
+                    <div class="main-slider__timeline-all"></div>
+                    <div class="main-slider__timeline-current"></div>
+                </div>
+            </div>-->
+            <!--
+            <div class="main-slider__controls">
+                <div class="wrap-inner">
+                    <div class="main-slider__next"></div>
+                    <div class="main-slider__prev"></div>
+                </div>
+            </div>-->
+        </div>
+    #*        <div class="appeal">
+                <div class="wrap-inner">
+                    <div class="appeal__inner">
+                        <ul class="appeal__list">
+                            <li class="appeal__item">
+                                <p class="appeal__caption">Customize</p>
+                                <div class="appeal__text">your end-user experience<br/>on the fly directly from this<br/>website</div>
+                            </li>
+                            <li class="appeal__item">
+                                <p class="appeal__caption">Outsource</p>
+                                <div class="appeal__text">all your operations hassles<br/>to the network controlling<br/>intelligence</div>
+                            </li>
+                            <li class="appeal__item">
+                                <p class="appeal__caption">Protect</p>
+                                <div class="appeal__text">your connection against all<br/>kinds of threats</div>
+                            </li>
+                        </ul>
+                        <a class="subscribe-link subscribe-link_right" href="#" onclick="NC.showLoader(true);Liferay.fire('show.customer-form'); return false;"><span class="subscribe-link__core">Subscribe Now</span></a>
+                    </div>
+                </div>
+            </div>*#
+    </div>
+#*    <section class="top-section">
+        <div class="wrap-inner">
+            <p class="top-section__caption">Knowledge & Community</p>
+            <div class="search__wrap">
+                <form action="">
+                    <button class="search-btn"></button>
+                    <input type="text" placeholder="Search" class="search__field"/>
+                </form>
+            </div>
+            #if ($has_navigation || $is_signed_in)
+                #parse ("$full_templates_path/navigation.vm")
+            #end
+        </div>
+    </section>*#
+    <section class="wrap__content">
+        <div class="wrap-inner">
+            <div id="content">
+                #if ($selectable)
+                $theme.include($content_include)
+                #else
+                    $portletDisplay.recycle()
+
+                    $portletDisplay.setTitle($the_title)
+
+                    $theme.wrapPortlet("portlet.vm", $content_include)
+                #end
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div id="footer">
+            <table style="float: right;display: inline-block;margin-top: 110px;">
+                <tr>
+                    <td style="font: 14px/18px GibsonRegular;
+    color: #a9a9a9;">
+                        © 2016 Netcracker. All rights reserved.
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </footer>
+    <img src="$images_folder/nc/snake.png"/>
+</div>
+
+    $theme.include($body_bottom_include)
+
+    $theme.include($bottom_include)
+<!--<div class="nc-loading-indicator">
+    <div>Loading…</div>
+</div>-->
+<div class="nc-loading-block"></div>
+##<div class="inline-dispatcher">$theme.runtime('dispatcher_WAR_commonportlets', '', '')</div>
+
+    #if ($theme_display.getThemeSetting('wide-width') == 'true')
+    <style type="text/css">
+        #wrapper {
+            width: auto;
+        }
+
+        .aui .portlet-borderless-container {
+            padding: 0;
+        }
+
+        .aui .dockbar-split .dockbar .navbar-inner .nav-account-controls {
+            margin-right: 0;
+            right: 5em;
+        }
+
+        .aui ul, .aui ol {
+            margin: 0;
+            padding: 0;
+        }
+
+        .portlet-journal-content {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .aui .article__list {
+            margin-left: -30px;
+        }
+    </style>
+    #end
+<style>
+    .portlet-journal-content {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 14px;
+    }
+
+    .dockbar-messages .header {
+        padding: 0;
+        line-height: normal;
+    }
+
+    .dockbar-messages .footer {
+        height: auto;
+        padding-top: 0;
+        margin-top: 0;
+        border: 0 none;
+    }
+</style>
+
+</body>
+</html>

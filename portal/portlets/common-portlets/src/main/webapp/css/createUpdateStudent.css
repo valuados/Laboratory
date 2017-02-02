@@ -1,0 +1,106 @@
+.student-config-popup.popup,
+.create-and-save-popup.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 1000;
+}
+
+.popup:before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.popup__cover {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.student-config-popup.popup .popup__content,
+.create-and-save-popup.popup .popup__content {
+    position: relative;
+    width: 422px;
+    background-color: #ffffff;
+}
+
+.popup__content-cross {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: url("../images/icons/cross.png") 50% no-repeat;
+    cursor: pointer;
+}
+
+.popup__header {
+    padding: 20px 40px 20px 0px;
+    margin: 0 20px 0 20px;
+}
+
+.popup__body {
+    padding: 0 20px 20px;
+}
+
+.popup__footer {
+    padding: 20px;
+    overflow: hidden;
+    /*background-color: #eff7fe;*/
+}
+
+.popup__footer-left {
+    float: left;
+}
+
+.popup__footer-right {
+    float: right;
+}
+
+.popup__footer-hint {
+    font-size: 10px;
+
+    color: #455863;
+}
+
+.popup__title {
+    font-size: 20px;
+
+    color: #000000;
+}
+
+.selectize-input input {
+    min-width: 110px !important;
+}
+
+.red {
+    color: red;
+}
+
+.student-popup-content .config-control {
+    width: 75%;
+    margin-top: 15px;
+}
+
+.student-popup-content input[disabled] {
+    border: 1px solid #ccc;
+    background-color: #E6E6E6 !important;
+    padding: 4px 10px;
+    border-radius: 2px;
+}
+
+.popup input[type="password"],
+.popup input[type="text"] {
+    height: 30px;
+}
+
+.popup i {
+    /*margin-right: 5px;*/
+}

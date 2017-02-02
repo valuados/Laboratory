@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>backend</artifactId>
+        <groupId>com.netcracker</groupId>
+        <version>1.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>boot-starter</artifactId>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.netcracker</groupId>
+            <artifactId>dao</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.netcracker</groupId>
+            <artifactId>rest-service</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-core</artifactId>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>backend</finalName>
+
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <executable>true</executable>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>1.8</version>
+                <executions>
+                    <execution>
+                        <id>scp-to-remote</id>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <scp localFile="${basedir}/target/${build.finalName}.jar"
+                                     remoteToFile="ubuntu@localhost:/laboratory/backend/" verbose="true"
+                                     password="netcracker" port="10022" trust="true">
+                                </scp>
+                                <sshexec trust="true" failonerror="false"
+                                         host="localhost"
+                                         port="10022"
+                                         username="ubuntu"
+                                         password="netcracker"
+                                         command="service backend stop ; service backend start"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
+                <!-- libraries for scp impl      -->
+                <!-- antrun doesn't use os's scp -->
+                <dependencies>
+                    <dependency>
+                        <groupId>com.jcraft</groupId>
+                        <artifactId>jsch</artifactId>
+                        <version>0.1.53</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>ant</groupId>
+                        <artifactId>ant-jsch</artifactId>
+                        <version>1.6.5</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+
+
+    </build>
+
+
+</project>

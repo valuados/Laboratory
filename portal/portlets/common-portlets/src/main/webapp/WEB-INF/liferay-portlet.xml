@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 6.2.0//EN"
+        "http://www.liferay.com/dtd/liferay-portlet-app_6_2_0.dtd">
+
+<liferay-portlet-app>
+
+    <portlet>
+        <portlet-name>students</portlet-name>
+        <preferences-owned-by-group>false</preferences-owned-by-group>
+        <instanceable>false</instanceable>
+        <requires-namespaced-parameters>false</requires-namespaced-parameters>
+        <header-portal-css>/css/common/nc-object-table.css</header-portal-css>
+        <header-portlet-css>/css/common/paging.css</header-portlet-css>
+        <header-portlet-css>/css/students.css</header-portlet-css>
+        <footer-portlet-javascript>/js/common/jquery.dataTables.js</footer-portlet-javascript>
+        <footer-portlet-javascript>/js/common/nc-object-table.js</footer-portlet-javascript>
+        <footer-portlet-javascript>/js/students.js</footer-portlet-javascript>
+    </portlet>
+
+    <portlet>
+        <portlet-name>createUpdateStudent</portlet-name>
+        <preferences-owned-by-group>false</preferences-owned-by-group>
+        <instanceable>false</instanceable>
+        <requires-namespaced-parameters>false</requires-namespaced-parameters>
+        <header-portal-css>/css/common/nc-object-table.css</header-portal-css>
+        <header-portlet-css>/css/createUpdateStudent.css</header-portlet-css>
+        <footer-portlet-javascript>/js/createUpdateStudent.js</footer-portlet-javascript>
+    </portlet>
+
+    <portlet>
+        <portlet-name>offers</portlet-name>
+        <preferences-owned-by-group>false</preferences-owned-by-group>
+        <instanceable>true</instanceable>
+        <requires-namespaced-parameters>false</requires-namespaced-parameters>
+        <header-portal-css>/css/bootstrap.min.css</header-portal-css>
+        <header-portlet-css>/css/offers.css</header-portlet-css>
+        <footer-portlet-javascript>/js/offers.js</footer-portlet-javascript>
+    </portlet>
+
+    <portlet>
+        <portlet-name>serviceCart</portlet-name>
+        <preferences-owned-by-group>false</preferences-owned-by-group>
+        <instanceable>false</instanceable>
+        <requires-namespaced-parameters>false</requires-namespaced-parameters>
+        <header-portal-css>/css/common/nc-object-table.css</header-portal-css>
+        <header-portal-css>/css/bootstrap.min.css</header-portal-css>
+        <header-portlet-css>/css/students.css</header-portlet-css>
+        <footer-portlet-javascript>/js/common/jquery.dataTables.js</footer-portlet-javascript>
+        <footer-portlet-javascript>/js/common/nc-object-table.js</footer-portlet-javascript>
+        <footer-portlet-javascript>/js/orders.js</footer-portlet-javascript>
+    </portlet>
+
+    <portlet>
+        <portlet-name>summary</portlet-name>
+        <preferences-owned-by-group>false</preferences-owned-by-group>
+        <instanceable>false</instanceable>
+        <requires-namespaced-parameters>false</requires-namespaced-parameters>
+        <header-portal-css>/css/bootstrap.min.css</header-portal-css>
+        <header-portlet-css>/css/offers.css</header-portlet-css>
+        <footer-portlet-javascript>/js/summary.js</footer-portlet-javascript>
+    </portlet>
+
+    <portlet>
+        <portlet-name>breadcrumbs</portlet-name>
+        <configuration-action-class>com.liferay.portal.kernel.portlet.DefaultConfigurationAction</configuration-action-class>
+        <instanceable>false</instanceable>
+        <requires-namespaced-parameters>false</requires-namespaced-parameters>
+        <header-portlet-css>/css/breadcrumbs.css</header-portlet-css>
+        <footer-portlet-javascript>/js/breadcrumbs.js</footer-portlet-javascript>
+    </portlet>
+
+</liferay-portlet-app>

@@ -1,0 +1,70 @@
+/*.breadcrumbs-list {*/
+    /*padding: 8px 15px;*/
+    /*margin: 0 0 20px;*/
+    /*list-style: none;*/
+    /*background-color: #f5f5f5;*/
+    /*-webkit-border-radius: 4px;*/
+    /*-moz-border-radius: 4px;*/
+    /*border-radius: 4px*/
+/*}*/
+
+/*.breadcrumbs-list > li {*/
+    /*display: inline-block;*/
+    /**display: inline;*/
+    /*text-shadow: 0 1px 0 #fff;*/
+    /**zoom: 1*/
+/*}*/
+
+/*.breadcrumbs-list > li > .divider {*/
+    /*padding: 0 5px;*/
+    /*color: #ccc*/
+/*}*/
+
+/*.breadcrumbs-list > .active {*/
+    /*color: #999*/
+/*}*/
+
+/*.breadcrumbs-list > li + li:before {*/
+    /*color: #ccc;*/
+    /*content: "/ ";*/
+    /*padding: 0 5px;*/
+/*}*/
+
+.breadcrumb {
+    padding: 8px 15px;
+    margin: 0 0 20px;
+    list-style: none;
+    background-color: #f5f5f5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+.breadcrumb > li {
+    text-shadow: 0 1px 0 #fff;
+    width: 1%;
+    display: table-cell;
+}
+
+.aui .breadcrumb > li {
+    display: table-cell;
+}
+
+.breadcrumb > li > .divider {
+    padding: 0 5px;
+    color: #ccc
+}
+
+.breadcrumb > .active {
+    color: #999
+}
+
+.breadcrumb > li + li:before {
+    color: #ccc;
+    content: "/ ";
+    padding: 0 5px;
+}
+
+
+
+

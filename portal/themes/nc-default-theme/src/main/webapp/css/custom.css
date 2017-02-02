@@ -1,0 +1,84 @@
+.aui a {
+    color: #36A2D8;
+    text-decoration: none;
+}
+#content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+}
+.current-page-title {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 15px 30px 15px 30px;
+}
+.current-page-title div {
+    font: 26px GibsonSemiBold;
+    margin-top: 12px;
+}
+.header-logo img {
+    height: auto;
+    width: 266px;
+    left: -13px;
+    top: 18px;
+    position: absolute;
+}
+.header {
+    padding: 0 0 0!important;
+    height: 100px;
+}
+.header-block {
+    display: table;
+    height: 100%;
+}
+.right-menu-block {
+    display: block;
+    vertical-align: middle;
+}
+.logo-block {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.cabinet-menu__list li {
+    line-height: 7px;
+}
+.aui .form-horizontal .control-label {
+    width: auto!important;
+}
+
+/* edit mode fixes*/
+
+
+.portlet-close.portlet-close-icon .icon-remove {
+    font-size: 15px;
+    color: white;
+    margin-left: 3px;
+}
+.portlet-borderless-bar a {
+    text-indent: 0!important;
+}
+
+.btn-group.lfr-icon-menu.portlet-options i.caret {
+    display: none!important;
+}
+
+.btn-group.lfr-icon-menu.portlet-options .icon-cog {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+}
+
+.loading-animation {
+    background: url(../images/progress_bar/loading_animation.gif) no-repeat top center;
+    margin-top: 10px;
+    padding-top: 40px;
+    text-align: left;
+}
+
+.aui .form-horizontal .control-label {
+    width: auto!important;
+    min-width: 285px;
+    text-align: left;
+}

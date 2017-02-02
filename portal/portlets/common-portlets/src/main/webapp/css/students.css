@@ -1,0 +1,146 @@
+.order-info {
+    max-width: 978px;
+    margin: 0 auto 25px;
+    white-space: nowrap;
+    font-size: 0;
+}
+.order-info__column {
+    display: inline-block;
+    font-size: 13px;
+}
+.order-info__column + .order-info__column {
+    margin-left: 25px;
+    padding-left: 25px;
+    border-left: 1px solid #bfbfbf;
+}
+.order-info__status {
+    margin-left: 5px;
+    padding: 3px 12px;
+    border-radius: 12px;
+}
+.order-info__status._active,
+.order-info__status._completed {
+    background-color: #c6edca;
+}
+h1.h1 {
+    display: none;
+}
+.orders {
+    padding: 20px 30px 30px;
+}
+
+.orders__title {
+    font: 26px GibsonSemiBold;
+    color: #465a6b;
+}
+.orders__group + .orders__group {
+    margin-top: 25px;
+    border-top: 1px solid #bfbfbf;
+}
+.orders__table {
+    display: table;
+    width: 100%;
+    margin: 2px auto;
+}
+
+.orders__table_head {
+    border-top: 1px solid #d5d5d2;
+    font: 14px/16px GibsonRegular;
+    color: #949494;
+}
+
+.orders__table_head th {
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.orders__table._auto {
+    width: 100%;
+    margin-top: 25px !important;
+    margin-bottom: 25px;
+}
+.orders__row {
+    display: table-row;
+}
+.orders__row_header .orders__cell {
+    text-align: left;
+    padding-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bfbfbf;
+    color: #555555;
+    font-weight: normal;
+}
+.orders__cell {
+    display: table-cell;
+    text-align: left;
+    margin: 14px 10px 13px 0;
+    font: 14px/40px GibsonRegular;
+}
+.orders__cell p {
+    margin: 0!important;
+}
+.orders__param {
+    color: #555555;
+
+}
+.orders .orders__cell:nth-child(1) {
+    width: 22%;
+}
+.orders .orders__cell:nth-child(2) {
+    width: 25%;
+    /*text-align: center;*/
+}
+.orders .orders__cell:nth-child(3) {
+    width: 28%;
+}
+.orders .orders__cell:nth-child(4) {
+    width: 25%;
+}
+.orders__link {
+    color: #0066a4;
+    text-decoration: none;
+}
+.orders__link:hover {
+    text-decoration: underline;
+}
+.orders__link._external {
+    color: #006699;
+    text-decoration: underline;
+}
+.orders__link._info {
+    position: relative;
+}
+.orders__status {
+    padding: 3px 12px;
+    border-radius: 12px;
+}
+.orders__status._active,
+.orders__status._completed {
+    background-color: #c6edca;
+}
+.orders__char_values {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50px;
+    height: 30px;
+}
+.dataTables_wrapper {
+    margin-bottom: 40px!important;
+}
+th {
+    text-align: left!important;
+}
+
+.orders__title i.icon-chevron-right {
+    color: #228ac7;
+    font-size: 16px;
+    margin-left: 7px;
+}
+
+.dataTables_length select {
+    max-width: 70px;
+}
+
+.student-table{
+    width: 70%;
+}

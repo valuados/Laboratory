@@ -1,0 +1,88 @@
+.services__status {
+    padding: 3px 12px;
+    border-radius: 12px;
+}
+.services__status._active {
+    background-color: #c6edca;
+}
+.services__status._completed {
+    background-color: #c6edca;
+}
+
+.services__status._entering {
+    background-color: #FF6633;
+    color: #fff;
+}
+
+.services__status._activation_in_progress {
+    background-color: #f1f72e;
+}
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * DataTables row classes
+ */
+table.display tr.odd.gradeA {
+    background-color: white !important;
+}
+
+table.display tr.even.gradeA {
+    background-color: white !important;
+}
+
+table.display tr.odd.gradeC {
+    background-color: white !important;
+}
+
+table.display tr.even.gradeC {
+    background-color: white !important;
+}
+
+table.display tr.odd.gradeX {
+    background-color: white !important;
+}
+
+table.display tr.even.gradeX {
+    background-color: white !important;
+}
+
+table.display tr.odd.gradeU {
+    background-color: white !important;
+}
+
+table.display tr.even.gradeU {
+    background-color: white !important;
+}
+tr.odd {
+    background-color: white !important;
+}
+
+tr.odd:hover{
+    background-color: #ecf5fa !important;
+    cursor: pointer;
+}
+tr.odd:hover td.sorting_1{
+    background-color: #ecf5fa !important;
+    cursor: pointer;
+}
+
+tr.even {
+    background-color: white;
+}
+tr.even:hover{
+    background-color: #ecf5fa !important;
+    cursor: pointer;
+}
+tr.even:hover .tr.odd td.sorting_1{
+    background-color: #ecf5fa !important;
+    cursor: pointer;
+}
+tr.odd td.sorting_1 {
+    background-color: white !important;
+}
+tr.odd td.sorting_1:hover .tr.even .tr.odd{
+    background-color: #ecf5fa !important;
+    cursor: pointer;
+}
+tr.odd td.sorting_1:hover{
+    background-color: #ecf5fa !important;
+    cursor: pointer;
+}

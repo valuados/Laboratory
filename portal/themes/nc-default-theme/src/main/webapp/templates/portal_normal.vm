@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+    #parse ($init)
+
+<html class="$root_css_class #if($portalUtil.isOmniadmin($user.getUserId())) omni-admin #end"
+      dir="#language ("lang.dir")" lang="$w3c_language_id">
+
+<head>
+    <title>$the_title - $company_name</title>
+
+    <meta content="initial-scale=1.0, width=device-width" name="viewport"/>
+
+    $theme.include($top_head_include)
+    #js("$javascript_folder/jquery.1.11.0.min.js?minifierType=js&languageId=$w3c_language_id")
+    <script>
+        jQuery.noConflict();
+    </script>
+    #js("$javascript_folder/nc.portlet.utils.js?minifierType=js&languageId=$w3c_language_id")
+    #js("$javascript_folder/wow.min.js?minifierType=js&languageId=$w3c_language_id")
+    #js("$javascript_folder/nc.portlet.form.profiles.js?minifierType=js&languageId=$w3c_language_id")
+    #js("$javascript_folder/notify.js?minifierType=js&languageId=$w3c_language_id")
+    #js("$javascript_folder/jquery-alert.js?minifierType=js&languageId=$w3c_language_id")
+    #set($brandSettingsFile = $propsUtil.get("portal.brand.settings.css.file"))
+    <link href='$css_folder/$brandSettingsFile' rel='stylesheet' type='text/css'>
+
+
+
+</head>
+
+<body class="$css_class">
+    $theme.include($body_top_include)
+<div class="wrap wrap_wide">
+    <header class="header">
+        <div class="wrap-inner header-block">
+            <div class="logo-block">
+                <a class="header-logo" href="/" title="#language_format ("go-to-x", [$site_name])">
+                    #*<img src="$company_logo" alt="Company Logo"/>*#
+                        <img src="/NC-Default-Theme/images/NC_logo.svg" alt="Company Logo"/>
+                </a>
+            </div>
+            #if(!$portalUtil.isOmniadmin($user.getUserId()))
+                <div class="right-menu-block">
+                    <a class="log-out-block" href="#"
+                       onclick="jQuery('li.sign-out a span').click(); return false;">Log Out</a>
+                    <ul class="top-menu top-menu_right">
+                        <li class="top-menu__item"><a href="/group/my-account/"
+                                                      class="top-menu__item-core">$user_name</a></li>
+                        <li class="top-menu__item"><a href="#" class="top-menu__item-core">Settings</a></li>
+                        <li class="top-menu__item">
+
+                        </li>
+                    </ul>
+                </div>
+                <style>
+                    ##hide dockbar for non-admin users
+                    .aui .dockbar-split .dockbar.navbar-static-top .collapse .nav-account-controls {
+                        display: none;
+                    }
+                </style>
+            #end
+        </div>
+        #dockbar()
+    </header>
+    <section class="cabinet-top">
+        #if ($has_navigation || $is_signed_in)
+            #parse ("$full_templates_path/navigation.vm")
+        #end
+    </section>
+    <div id="content">
+        #if ($selectable)
+            $theme.include($content_include)
+        #else
+            $portletDisplay.recycle()
+
+            $portletDisplay.setTitle($the_title)
+
+            $theme.wrapPortlet("portlet.vm", $content_include)
+        #end
+    </div>
+    #*<div class="footer__pre"></div>*#
+</div>
+<footer class="footer">
+##        #set($footerVmFile = $propsUtil.get("portal.footer.vm.file"))
+##        #parse ("$full_templates_path/$footerVmFile")
+    #parse ("$full_templates_path/footer.vm")
+</footer>
+<img src="$images_folder/nc/snake.png"/>
+
+    $theme.include($body_bottom_include)
+
+    $theme.include($bottom_include)
+<div class="nc-loading-indicator">
+##    <div>Loading…</div>
+</div>
+<div class="nc-loading-block"></div>
+<script>
+    new WOW().init();
+</script>
+<style>
+    .aui ul, .aui ol {
+        margin: 0;
+        padding: 0;
+    }
+
+    .article__list .portlet-journal-content {
+        display: inline-block;
+        vertical-align: top;
+        font-size: 14px;
+    }
+
+    .aui .article__list {
+        margin-left: -30px;
+    }
+
+    .aui p {
+        margin: 0;
+    }
+
+    .cabinet-menu__list {
+        margin-bottom -2px;
+    }
+
+    .dockbar-messages .header {
+        padding: 0;
+        line-height: normal;
+    }
+
+    .dockbar-messages .footer {
+        height: auto;
+        padding-top: 0;
+        margin-top: 0;
+        border: 0 none;
+    }
+
+    .portlet-column-content.empty {
+        padding: 0;
+    }
+
+    .wrap__content .portlet-layout {
+        width: 100%;
+    }
+
+    .aui .widget-title h4, .aui .widget-title h5 {
+
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        font-size: 18px;
+    }
+</style>
+</body>
+</html>

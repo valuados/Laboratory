@@ -1,0 +1,31 @@
+<div id="top-custom-nav">
+    <div class="segMenuContainer">
+        <ul class="segMenu" id="leftSegMenu">
+            <li class=""><a id="segMenuItemPersonal" class="segMenuItem hasURL hasNoSubMenu"
+                            href="http://www.att.com/gen/landing-pages?pid=3308" name="Personal
+"><span>Personal</span></a></li>
+            <li class="business">
+                <a id="segMenuItemBusiness" class="segMenuItem hasSubMenu selectedChevron1 hasURL"
+                   href="http://www.att.com/gen/general?pid=11627" name="Business
+"><span>Business</span><i class="icon-chevron-down"></i></a>
+
+                <div class="segSubMenu">
+                    <ul>
+                        <li class=""><a href="http://www.att.com/gen/landing-pages?pid=9213" name="Business
+_Small Business">Small Business</a></li>
+                        <li class=""><a href="http://www.att.com/gen/landing-pages?pid=9214" name="Business
+_Enterprise Business">Enterprise Business</a></li>
+                        <li class=""><a href="http://www.att.com/gen/general?pid=11624" name="Business
+_Wholesale">Wholesale</a></li>
+                        <li class=""><a href="http://www.att.com/gen/general?pid=11625" name="Business
+_Government">Government</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="rightMost"><a id="segMenuItemAboutATT" class="segMenuItem hasURL hasNoSubMenu"
+                                     href="http://www.att.com/gen/landing-pages?pid=3309" name="About AT&amp;T
+"><span>About AT&amp;T</span></a></li>
+        </ul>
+    </div>
+</div>
+<div class="clearfix"></div>

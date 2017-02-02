@@ -1,0 +1,215 @@
+//.aui body {
+//  background-color: #EDEDED;
+//  &.portal-popup {
+//    background-color: white;
+//  }
+//}
+//
+//#wrapper {
+//  width: 950px;
+//  padding-left: 15px;
+//  padding-right: 15px;
+//  background-color: #fff;
+//  margin: 0 auto;
+//  padding-top: 5px;
+//  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.39);
+//}
+//
+//.aui .dockbar.navbar .nav > li > a {
+//  margin: 0;
+//  padding: 0px 10px;
+//  font-size: 11px;
+//}
+//
+//#footer {
+//  width: 980px;
+//  margin: 0 auto;
+//  font-size: 11px;
+//}
+//
+//.sub-logo-ent {
+//  position: absolute;
+//  z-index: 1;
+//  font-size: 15px;
+//  top: 18px;
+//  color: rgb(151, 151, 151);
+//  left: 230px;
+//}
+//
+//.aui #navigation .nav li.active > a,
+//.aui #navigation .nav li:hover > a {
+//  background: #484a4c !important;
+//}
+//
+////.aui .dockbar .navbar-inner .nav > li,
+//.aui .dockbar-split .dockbar .navbar-inner .nav > li.admin-links {
+//  background: #616466;
+//}
+//
+//.aui #navigation .nav .dropdown-menu {
+//  background: rgba(97, 100, 102, 0.94);
+//  font-size: 11px;
+//  width: 100%;
+//}
+//
+//.aui #navigation .nav .dropdown-menu li a {
+//  line-height: 16px;
+//}
+//
+//.aui .dockbar-split .dockbar .navbar-inner .nav > li > a {
+//  line-height: 25px;
+//}
+//
+//.aui .dockbar-split .dockbar .navbar-inner .nav-account-controls {
+//  border-top: 1px solid #000000;
+//  right: 50%;
+//  margin-right: -490px;
+//}
+//
+//#_145_mySites {
+//  display: none;
+//}
+//
+//html.omni-admin #_145_mySites {
+//  display: block;
+//}
+//
+//.aui .dockbar .nav li.dropdown.user-avatar .user-avatar-image {
+//  border-radius: 0;
+//  box-shadow: none;
+//}
+//
+//.aui #navigation .navbar-inner {
+//  background: #616466;
+//  border-radius: 3px;
+//}
+//
+//.aui #breadcrumbs {
+//  margin-bottom: 5px;
+//}
+//
+//.aui .breadcrumb {
+//  background-color: transparent;
+//  > li {
+//    font-size: 11px;
+//    &.only {
+//      display: none;
+//    }
+//    &.last a {
+//      color: #FF7200;
+//    }
+//  }
+//}
+//
+//.portlet-borderless-bar .portlet-back a {
+//  color: #fff;
+//  &:hover {
+//    color: #fff;
+//  }
+//}
+
+//noinspection SassScssUnresolvedFunction,CssUnknownProperty
+.nc-loading-indicator {
+  width: 5em;
+  height: 5em;
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  margin-left: -2.5em;
+  display: none;
+  font-size: 12px;
+  text-indent: 999em;
+  overflow: hidden;
+  -webkit-animation: spin 1s infinite steps(8);
+  animation: spin 1s infinite steps(8);
+  z-index: 2001;
+
+  &:before,
+  &:after,
+  > div:before,
+  > div:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 2.25em; /* (container width - part width)/2  */
+    width: .5em;
+    height: 1.5em;
+    border-radius: .2em;
+    background: #eee;
+    box-shadow: 0 3.5em #eee; /* container height - part height */
+    transform-origin: 50% 2.5em; /* container height / 2 */
+    -webkit-transform-origin: 50% 2.5em; /* container height / 2 */
+  }
+
+  &:before {
+    background: #555;
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    background: #777;
+  }
+
+  > div:before {
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    background: #999;
+  }
+
+  > div:after {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    background: #bbb;
+  }
+}
+
+.nc-loading-block {
+  display: none;
+  height: 100%;
+  width: 100%;
+  opacity: 0.4;
+  position: fixed;
+  z-index: 2000;
+  background: #000000;
+  top: 0;
+}
+
+//noinspection SassScssUnresolvedFunction,CssUnknownProperty
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+//noinspection SassScssUnresolvedFunction,CssUnknownProperty
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+  }
+}
+
+.inline-dispatcher {
+  display: none;
+}
+//
+//.aui .lfr-hudcrumbs {
+//  display: none !important;
+//}
+//
+//.aui .sign-in-form .control-group {
+//  margin-bottom: 0;
+//}
+//
+//#signinmodal {
+//  height: 280px !important;
+//  width: 420px !important;
+//  margin-left: -210px;
+//  .modal-body {
+//    height: auto !important;
+//  }
+//}
+//
+//.aui .portlet-borderless-container {
+//  padding: 0;
+//}

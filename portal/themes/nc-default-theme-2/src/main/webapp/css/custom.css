@@ -1,0 +1,38 @@
+/*@import url(scss/_custom.scss);
+@import url(scss/_nc.scss);
+@import url(scss/_preferences.scss);*/
+
+
+
+.aui .dockbar-split .dockbar.navbar-static-top .collapse .nav-account-controls {
+  display: none;
+}
+
+#signinmodal{
+    height: 335px!important;
+    width: 242px!important;
+}
+.header-logo {
+    margin-top: -20px;
+}
+.header-logo img {
+    height: auto;
+    width: 300px;
+}
+
+#top_catch{
+    margin: 30px auto;
+    padding: 0 0 !important;
+}
+
+.aui h3 {
+    font: 26px GibsonRegular !important;
+    margin-top: 25px !important;
+}
+
+
+/*login modal*/
+
+.aui .modal-body {
+    overflow-y: hidden !important;
+}

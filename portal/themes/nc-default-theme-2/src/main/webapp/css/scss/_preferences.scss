@@ -1,0 +1,20 @@
+.preferences-container {
+  padding: 30px 5px 10px 10px;
+  border: 1px solid rgb(69, 203, 245);
+  min-width: 410px;
+  &.form-horizontal .control-label {
+
+  }
+  &:after {
+    content: "Preferences";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    padding: 3px 7px;
+    font-size: 12px;
+
+    background-color: rgb(69, 203, 245);
+    color: #fff;
+    border-radius: 0 0 4px 0;
+  }
+}

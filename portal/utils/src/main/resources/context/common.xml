@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/mvc
+	http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+    <mvc:annotation-driven/>
+    <context:property-placeholder location="file:${liferay.home}/portal-setup-wizard.properties"/>
+    <context:component-scan base-package="com.netcracker.laboratory.portlets.utils"/>
+
+    <!--i18n-->
+    <bean id="messageSource"
+          class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+        <property name="basename" value="classpath:i18n/Language"/>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="useCodeAsDefaultMessage" value="true"/>
+    </bean>
+
+    <mvc:annotation-driven validator="validator"/>
+
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+        <property name="validationMessageSource" ref="messageSource"/>
+    </bean>
+
+    <bean class="org.springframework.web.portlet.mvc.annotation.AnnotationMethodHandlerAdapter"
+          p:customModelAndViewResolver-ref="customRequestResolver">
+        <property name="webBindingInitializer">
+            <bean class="org.springframework.web.bind.support.ConfigurableWebBindingInitializer">
+                <property name="validator" ref="validator"/>
+            </bean>
+        </property>
+        <property name="customArgumentResolvers">
+            <array>
+                <ref bean="jsonArgumentResolver"/>
+                <ref bean="preferenceArgumentResolver"/>
+            </array>
+        </property>
+    </bean>
+
+    <bean id="conversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">
+        <property name="converters">
+            <set>
+                <bean class="com.netcracker.laboratory.portlets.utils.preferences.converters.StringToBigInt"/>
+            </set>
+        </property>
+    </bean>
+
+    <bean id="freemarkerConfig"
+          class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
+        <property name="templateLoaderPaths" value="/WEB-INF/views/ftl/,classpath:/freemarker"/>
+        <property name="freemarkerSettings">
+            <props>
+                <prop key="auto_include">/init.ftl</prop>
+                <prop key="number_format">computer</prop>
+            </props>
+        </property>
+        <property name="freemarkerVariables">
+            <map>
+                <entry key="aggregator" value-ref="freemarkerToolsAggregator"/>
+            </map>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver"
+          p:viewClass="org.springframework.web.servlet.view.freemarker.FreeMarkerView"
+          p:exposeSpringMacroHelpers="true"
+          p:exposeRequestAttributes="true"
+          p:suffix=".ftl"
+          p:cache="true"
+          p:order="1"
+          p:contentType="text/html; charset=UTF-8"/>
+
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="cache" value="true"/>
+        <property name="viewClass"
+                  value="org.springframework.web.servlet.view.JstlView"/>
+        <property name="prefix" value="/WEB-INF/views/jsp/"/>
+        <property name="order" value="2"/>
+        <property name="suffix" value=".jsp"/>
+        <property name="contentType" value="text/html; charset=UTF-8"/>
+    </bean>
+
+    <bean class="org.springframework.web.portlet.mvc.annotation.AnnotationMethodHandlerExceptionResolver"/>
+
+    <import resource="remote.xml"/>
+
+</beans>

@@ -1,0 +1,70 @@
+<div class="fui-page-footer">
+    <div class="fui-footnote">
+        <div class="fui-float-none">
+            <div class="row">
+                <div class="socialnetwork">
+                    <h3 class="obs_title_h3">follow us on:</h3>
+                    <ul>
+                        <li class="twitter">
+                            <a target="_blank" href="https://twitter.com/orangebusiness"
+                               title="Follow us on twitter Open a new window"></a>
+                        </li>
+                        <li class="linkedin">
+                            <a target="_blank" href="http://www.linkedin.com/company/orange-business-services"
+                               title="Follow us on linked in Open a new window"></a>
+                        </li>
+                        <li class="slideshare">
+                            <a target="_blank" href="http://www.slideshare.net/orangebusiness"
+                               title="Follow us on slideshare Open a new window"></a>
+                        </li>
+                        <li class="googleplus">
+                            <a target="_blank" href="https://plus.google.com/+orangebusinessservices/"
+                               title="Follow us on googleplus Open a new window"></a>
+                        </li>
+                        <li class="facebook last bottom">
+                            <a target="_blank" href="https://www.facebook.com/orangebusiness"
+                               title="Follow us on facebook Open a new window"></a>
+                        </li>
+                        <li class="dailymotion bottom">
+                            <a target="_blank" href="http://www.dailymotion.com/orangebusiness"
+                               title="Follow us on dailymotion Open a new window"></a>
+                        </li>
+                        <li class="youtube bottom">
+                            <a target="_blank" href="http://www.youtube.com/user/orangebusiness"
+                               title="Follow us on youtube Open a new window"></a>
+                        </li>
+                        <li class="pinterest bottom">
+                            <a target="_blank" href="http://pinterest.com/orangebusiness/"
+                               title="Follow us on pinterest Open a new window"></a>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+                <div class="contact">
+                    <h2>contact:</h2>
+                    <a href="en/contact-us.html"><img src="$images_folder/orange/contact_footer_en_v3.jpg"
+                                                      alt="contact us for any question"
+                                                      title="contact us for any question"></a>
+                </div>
+            </div>
+
+            <!-- End : footnote share-list -->
+        </div>
+    </div>
+    <div id="footer-button" class="clearfix">
+        <div class="region region-footer footerMarginBottom">
+            <div class="content">
+                <p class="copy">
+                    <span style="font-family: Arial, FreeSans, Helvetica, sans-serif; line-height: 17px; left: 2%">© Orange Business Services 2015</span>
+                </p>
+            </div>
+            <div class="content" style="left: 35%">
+                <a href="" title="">magazines  |</a>
+                <a href="" title="">cookies  |</a>
+                <a href="">legal information  |</a>
+                <a href="">credits  |</a>
+                <a href="" title="">site map</a>
+            </div>
+        </div>
+    </div>
+</div>
